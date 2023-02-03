@@ -10,10 +10,10 @@ namespace ProyectoFinal
     {
         public Ambiente1() { }
         public object MaquinasProduccion { get; private set; }
-        public void LlenarDatosAletoriosMaq1(int NumeroDatos, List<Maquina>MaquinasProduccion,int limiteInferior, int limiteSuperior)
+        public void LlenarDatosAletoriosMaq1(int NumeroMaquinas, List<Maquina>MaquinasProduccion,int limiteInferior, int limiteSuperior)
         {
             Random aleatorios = new Random(Environment.TickCount);
-            for (int i = 0; i < NumeroDatos; i++)
+            for (int i = 0; i < NumeroMaquinas; i++)
             {
                 double value = (double)aleatorios.NextDouble();
                 int value0 = aleatorios.Next(limiteInferior, limiteSuperior);
@@ -24,10 +24,10 @@ namespace ProyectoFinal
             }
         }
         public object DemandaGeneral { get; private set; }
-        public void LLenarDatosAleatoriosDem(int NumeroDatos,List<Demanda>DemandaGeneral,int limiteInferior, int limiteSuperior)
+        public void LLenarDatosAleatoriosDem(int CantidadDemanda,List<Demanda>DemandaGeneral,int limiteInferior, int limiteSuperior)
         {
             Random aleatorios = new Random(Environment.TickCount);
-            for (int i = 0; i < NumeroDatos; i++)
+            for (int i = 0; i < CantidadDemanda; i++)
             {
                 double value = (double)aleatorios.NextDouble();
                 double value1 = aleatorios.Next(limiteInferior, limiteSuperior);
